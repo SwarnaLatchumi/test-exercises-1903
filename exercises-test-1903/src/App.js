@@ -71,6 +71,23 @@ class JSONlist extends React.Component
   }
 }
 
+function Get_unique_value(json_array)
+{
+//Get unique values from tag node
+var lookup = {};
+var items = json_array;
+var result = [];
+
+for (var item, i = 0; item = items[i++];) {
+var name = item.tag;
+
+if (!(name in lookup)) {
+    lookup[name] = 1;
+    result.push(name);
+}
+}
+console.log(result);
+}
 
 function App() {
 
